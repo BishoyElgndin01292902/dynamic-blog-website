@@ -42,7 +42,7 @@ form label {
 }
 
 form input, form textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -172,4 +172,23 @@ button:hover {
 
 #save-btn:hover {
     background-color: #218838;
+}
+
+
+/* Responsive styles for mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;  /* Take up more of the screen width */
+    }
+
+    form input, form textarea {
+        font-size: 0.9em; /* Make inputs and textarea smaller */
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 0.9em; /* Make button smaller */
+        padding: 8px 16px;
+    }
 }
