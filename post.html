@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Post</h1>
+        <a href="index.html">Back to Home</a>
+    </header>
+
+    <main>
+        <div id="post-container">
+            <h2 id="post-title"></h2>
+            <p id="post-content"></p>
+            <button id="edit-btn">Edit</button>  <!-- Edit button -->
+        </div>
+
+        <!-- Hidden Edit Form -->
+        <div id="edit-form" style="display: none;">
+            <input type="text" id="edit-title" placeholder="Edit Title">
+            <textarea id="edit-content" placeholder="Edit Content"></textarea>
+            <button id="save-btn">Save</button>  <!-- Save button -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
