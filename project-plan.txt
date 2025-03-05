@@ -1,0 +1,20 @@
+Project Overview:
+- This project will be a dynamic blog website where users can create, read, update, and delete blog posts.
+- Posts will be stored in the browser's local storage.
+
+Pages and Features:
+1. index.html: Homepage
+   - Displays a list of all blog posts stored in local storage.
+   - Allows the user to click on a post to view or edit it.
+2. new-post.html: Create New Post
+   - A form where users can enter a title, content, and an optional image URL.
+   - Saves the new post to local storage.
+3. post.html: View/Edit Post
+   - Displays an individual post with an option to edit or delete it.
+   - Edit functionality updates the post in local storage.
+   - Delete functionality removes the post from local storage.
+
+Technologies:
+- HTML, CSS, JavaScript
+- Local Storage for storing posts in the browser
+- Git and GitHub for version control and collaboration
