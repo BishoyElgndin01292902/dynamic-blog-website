@@ -6,15 +6,76 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: lightgreen;
+    color: blue;
     text-align: center;
     padding: 1rem;
 }
 
 a {
-    color: white;
+    color: blue;
     text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 200px;
+    resize: none;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+form a:hover {
+    text-decoration: underline;
 }
 
 #post-list {
