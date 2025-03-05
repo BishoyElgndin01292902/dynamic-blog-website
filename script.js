@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { 
     // Get the post ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get("id");
@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const postTitle = document.getElementById("post-title");
     const postContent = document.getElementById("post-content");
     const editBtn = document.getElementById("edit-btn");
+    const deleteBtn = document.getElementById("delete-btn");  // Added delete button
     const editForm = document.getElementById("edit-form");
     const editTitle = document.getElementById("edit-title");
     const editContent = document.getElementById("edit-content");
@@ -51,9 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Post updated successfully!");
             editForm.style.display = "none";  // Hide edit form
         });
+
+        // Delete post functionality
+        deleteBtn.addEventListener("click", function () {
+            // Remove the post from the posts array
+            posts = posts.filter(p => p.id !== postId);
+            
+            // Save updated posts array to local storage
+            localStorage.setItem("posts", JSON.stringify(posts));
+            
+            // Redirect to homepage after deletion
+            window.location.href = "index.html";  // Redirect to homepage
+        });
     } else {
         postTitle.textContent = "Post not found.";
         postContent.textContent = "";
         editBtn.style.display = "none";  // Hide edit button if post not found
+        deleteBtn.style.display = "none";  // Hide delete button if post not found
     }
 });
