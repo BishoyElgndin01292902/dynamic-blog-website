@@ -1,4 +1,36 @@
-document.addEventListener("DOMContentLoaded", function () { 
+// script.js for index.html (Homepage)
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Load all posts from localStorage
+    const posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+    // Get the post list container
+    const postList = document.getElementById('post-list');
+
+    // If no posts exist, show a message
+    if (posts.length === 0) {
+        postList.innerHTML = "<p> No blog posts available </p>";
+        return;
+    }
+
+    // Loop through each post and create a clickable link
+    posts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.classList.add('post');
+        
+        const postLink = document.createElement('a');
+        postLink.href = `post.html?id=${post.id}`;  // Link to the individual post page
+        postLink.textContent = post.title;
+
+        postElement.appendChild(postLink);
+        postList.appendChild(postElement);
+    });
+});
+
+
+// script.js for post.html (Individual Post Page)
+
+document.addEventListener("DOMContentLoaded", function () {
     // Get the post ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const postId = urlParams.get("id");
@@ -7,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const postTitle = document.getElementById("post-title");
     const postContent = document.getElementById("post-content");
     const editBtn = document.getElementById("edit-btn");
-    const deleteBtn = document.getElementById("delete-btn");  // Added delete button
+    const deleteBtn = document.getElementById("delete-btn");
     const editForm = document.getElementById("edit-form");
     const editTitle = document.getElementById("edit-title");
     const editContent = document.getElementById("edit-content");

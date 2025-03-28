@@ -1,4 +1,4 @@
-// scripts.js
+// scripts.js for new-post.html
 
 // Function to generate a unique ID for each post
 function generatePostId() {
@@ -40,3 +40,5 @@ document.getElementById('post-form').addEventListener('submit', function(event) 
     // Redirect to the homepage after saving the post
     window.location.href = 'index.html'; // Redirect to homepage
 });
+
+
